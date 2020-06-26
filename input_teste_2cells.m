@@ -2,14 +2,17 @@ clc;
 close all;
 clear all;
 
-%===========================INPUTs================================%
-mod=[0 300 1;       
-     0 250 2];     
+z0 = 0; % z axis origin
+x0 = 0; % x axis origin
+cellDz = 300; % cell length in z
+cellDx = 250; % cell length in x
+nz = 1; % Number of cells in z direction
+nx = 2; % Number of cells in x direction
+
  % matriz com as dimensões da malha
- % A primeira coluna representa as coordenadas da origem.
- % A segunda o tamanho de cada célula nas direções z e x
- % respectivamente. E a terceira representa a quantidade de
- % células nas direções 'z' e 'x' respectivamente.
+mod=[z0 cellDz nz;       
+     x0 cellDx nx];     
+ 
 %===========================FONTE=================================%
 ss = [0, 50
       0, 240];   
